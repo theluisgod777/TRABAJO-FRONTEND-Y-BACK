@@ -1,0 +1,33 @@
+<header class="menu py-3">
+  <div class="d-flex justify-content-between align-items-center">
+    <!-- Logo -->
+    <div class="col-2">
+      <a [routerLink]="['adminEstudiantes']">
+        <img src="assets/img/logo-quipux.svg" alt="logo-quipux" class="img-fluid logo">
+      </a>
+    </div>
+
+    <!-- Perfil -->
+    <div class="col-auto">
+      <a href="javascript:;" class="text-muted fs-14 d-flex align-items-center link-profile" (click)="toggleProfileMenu()">
+        <span class="profile-name-header">Luis Alberto Valencia Causil</span>
+        <div class="profile-img-container ms-3">
+          <img src="assets/img/perfil.jpg" alt="Profile" class="profile-img">
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Menú de perfil -->
+  <div class="profile-menu-overlay" *ngIf="showProfileMenu" (click)="toggleProfileMenu()">
+    <div class="profile-menu-content" (click)="$event.stopPropagation()">
+      <button class="close-btn" (click)="toggleProfileMenu()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="profile-img-container-large">
+        <img src="assets/img/perfil.jpg" alt="Profile" class="profile-img-large">
+      </div>
+      <h3 class="profile-name">Luis Alberto Valencia Causil</h3>
+    </div>
+  </div>
+</header>

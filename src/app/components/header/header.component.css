@@ -1,0 +1,132 @@
+/* ====== Header general ====== */
+.menu {
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* ====== Logo ====== */
+.logo {
+  max-height: 45px;
+  transition: transform 0.2s ease;
+}
+
+.logo:hover {
+  transform: scale(1.03);
+}
+
+/* ====== Nombre en el header ====== */
+.profile-name-header {
+  font-weight: 500;
+  color: #333;
+  margin-right: 10px; /* 👈 separa el texto de la imagen */
+}
+
+
+/* ====== Contenedor circular para la foto pequeña ====== */
+.profile-img-container {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.profile-img-container:hover {
+  transform: scale(1.05);
+  border-color: #007bff;
+}
+
+/* ====== Imagen de perfil ====== */
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ====== Menú emergente ====== */
+.profile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.profile-menu-content {
+  background: white;
+  border-radius: 16px;
+  padding: 40px 30px;
+  position: relative;
+  max-width: 400px;
+  text-align: center;
+  animation: slideIn 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ====== Botón cerrar ====== */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* ====== Contenedor circular grande ====== */
+.profile-img-container-large {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  border: 4px solid #44b99e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ====== Imagen grande ====== */
+.profile-img-large {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ====== Nombre dentro del menú ====== */
+.profile-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
